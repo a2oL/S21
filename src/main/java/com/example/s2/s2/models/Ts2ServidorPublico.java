@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Artur
+ * @author Artur Lpz
  */
 @Entity
 @Table(name = "ts2_servidor_publico")
