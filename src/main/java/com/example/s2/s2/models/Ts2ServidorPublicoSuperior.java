@@ -12,12 +12,9 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -25,20 +22,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_servidor_publico_superior")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findAll", query = "SELECT t FROM Ts2ServidorPublicoSuperior t"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findById", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.ts2ServidorPublicoSuperiorPK.id = :id"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByOrden", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.ts2ServidorPublicoSuperiorPK.orden = :orden"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByNombres", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.nombres = :nombres"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByPrimerapellido", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.primerapellido = :primerapellido"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findBySegundoapellido", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.segundoapellido = :segundoapellido"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByCurp", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.curp = :curp"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByRfc", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.rfc = :rfc"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByFechaDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.fechaDeRegistro = :fechaDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByUsuarioDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.usuarioDeRegistro = :usuarioDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByFechaDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.fechaDeModificacion = :fechaDeModificacion"),
-    @NamedQuery(name = "Ts2ServidorPublicoSuperior.findByUsuarioDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoSuperior t WHERE t.usuarioDeModificacion = :usuarioDeModificacion")})
 public class Ts2ServidorPublicoSuperior implements Serializable {
 
     private static final long serialVersionUID = 1L;

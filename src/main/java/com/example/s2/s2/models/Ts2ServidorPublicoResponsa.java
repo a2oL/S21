@@ -12,12 +12,9 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -25,16 +22,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_servidor_publico_responsa")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findAll", query = "SELECT t FROM Ts2ServidorPublicoResponsa t"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findById", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.ts2ServidorPublicoResponsaPK.id = :id"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findByOrden", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.ts2ServidorPublicoResponsaPK.orden = :orden"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findByIdTipoDeResponsabilidad", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.ts2ServidorPublicoResponsaPK.idTipoDeResponsabilidad = :idTipoDeResponsabilidad"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findByFechaDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.fechaDeRegistro = :fechaDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findByUsuarioDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.usuarioDeRegistro = :usuarioDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findByFechaDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.fechaDeModificacion = :fechaDeModificacion"),
-    @NamedQuery(name = "Ts2ServidorPublicoResponsa.findByUsuarioDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoResponsa t WHERE t.usuarioDeModificacion = :usuarioDeModificacion")})
 public class Ts2ServidorPublicoResponsa implements Serializable {
 
     private static final long serialVersionUID = 1L;

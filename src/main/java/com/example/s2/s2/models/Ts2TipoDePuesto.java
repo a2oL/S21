@@ -10,10 +10,7 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -21,14 +18,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_tipo_de_puesto")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2TipoDePuesto.findAll", query = "SELECT t FROM Ts2TipoDePuesto t"),
-    @NamedQuery(name = "Ts2TipoDePuesto.findByIdTipoDePuesto", query = "SELECT t FROM Ts2TipoDePuesto t WHERE t.idTipoDePuesto = :idTipoDePuesto"),
-    @NamedQuery(name = "Ts2TipoDePuesto.findByOrden", query = "SELECT t FROM Ts2TipoDePuesto t WHERE t.orden = :orden"),
-    @NamedQuery(name = "Ts2TipoDePuesto.findByJerarquia", query = "SELECT t FROM Ts2TipoDePuesto t WHERE t.jerarquia = :jerarquia"),
-    @NamedQuery(name = "Ts2TipoDePuesto.findByNivel", query = "SELECT t FROM Ts2TipoDePuesto t WHERE t.nivel = :nivel"),
-    @NamedQuery(name = "Ts2TipoDePuesto.findByFuncional", query = "SELECT t FROM Ts2TipoDePuesto t WHERE t.funcional = :funcional")})
 public class Ts2TipoDePuesto implements Serializable {
 
     private static final long serialVersionUID = 1L;

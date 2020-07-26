@@ -12,12 +12,9 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -25,16 +22,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_servidor_publico_procedimi")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findAll", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findById", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.ts2ServidorPublicoProcedimiPK.id = :id"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findByOrden", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.ts2ServidorPublicoProcedimiPK.orden = :orden"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findByIdTipoDeProcedimiento", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.ts2ServidorPublicoProcedimiPK.idTipoDeProcedimiento = :idTipoDeProcedimiento"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findByFechaDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.fechaDeRegistro = :fechaDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findByUsuarioDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.usuarioDeRegistro = :usuarioDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findByFechaDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.fechaDeModificacion = :fechaDeModificacion"),
-    @NamedQuery(name = "Ts2ServidorPublicoProcedimi.findByUsuarioDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoProcedimi t WHERE t.usuarioDeModificacion = :usuarioDeModificacion")})
 public class Ts2ServidorPublicoProcedimi implements Serializable {
 
     private static final long serialVersionUID = 1L;

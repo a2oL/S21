@@ -10,10 +10,7 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -21,14 +18,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_tipo_de_ente_publico")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2TipoDeEntePublico.findAll", query = "SELECT t FROM Ts2TipoDeEntePublico t"),
-    @NamedQuery(name = "Ts2TipoDeEntePublico.findByIdTipoDeEntePublico", query = "SELECT t FROM Ts2TipoDeEntePublico t WHERE t.idTipoDeEntePublico = :idTipoDeEntePublico"),
-    @NamedQuery(name = "Ts2TipoDeEntePublico.findByValor", query = "SELECT t FROM Ts2TipoDeEntePublico t WHERE t.valor = :valor"),
-    @NamedQuery(name = "Ts2TipoDeEntePublico.findBySiglas", query = "SELECT t FROM Ts2TipoDeEntePublico t WHERE t.siglas = :siglas"),
-    @NamedQuery(name = "Ts2TipoDeEntePublico.findByClave", query = "SELECT t FROM Ts2TipoDeEntePublico t WHERE t.clave = :clave"),
-    @NamedQuery(name = "Ts2TipoDeEntePublico.findByPoder", query = "SELECT t FROM Ts2TipoDeEntePublico t WHERE t.poder = :poder")})
 public class Ts2TipoDeEntePublico implements Serializable {
 
     private static final long serialVersionUID = 1L;

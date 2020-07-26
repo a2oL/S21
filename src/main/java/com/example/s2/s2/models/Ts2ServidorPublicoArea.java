@@ -12,12 +12,9 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -25,16 +22,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_servidor_publico_area")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findAll", query = "SELECT t FROM Ts2ServidorPublicoArea t"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findById", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.ts2ServidorPublicoAreaPK.id = :id"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findByOrden", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.ts2ServidorPublicoAreaPK.orden = :orden"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findByIdTipoDeArea", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.ts2ServidorPublicoAreaPK.idTipoDeArea = :idTipoDeArea"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findByFechaDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.fechaDeRegistro = :fechaDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findByUsuarioDeRegistro", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.usuarioDeRegistro = :usuarioDeRegistro"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findByFechaDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.fechaDeModificacion = :fechaDeModificacion"),
-    @NamedQuery(name = "Ts2ServidorPublicoArea.findByUsuarioDeModificacion", query = "SELECT t FROM Ts2ServidorPublicoArea t WHERE t.usuarioDeModificacion = :usuarioDeModificacion")})
 public class Ts2ServidorPublicoArea implements Serializable {
 
     private static final long serialVersionUID = 1L;

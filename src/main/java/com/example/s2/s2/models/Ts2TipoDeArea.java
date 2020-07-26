@@ -6,18 +6,11 @@
 package com.example.s2.s2.models;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -25,12 +18,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "ts2_tipo_de_area")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2TipoDeArea.findAll", query = "SELECT t FROM Ts2TipoDeArea t"),
-    @NamedQuery(name = "Ts2TipoDeArea.findByIdTipoDeArea", query = "SELECT t FROM Ts2TipoDeArea t WHERE t.idTipoDeArea = :idTipoDeArea"),
-    @NamedQuery(name = "Ts2TipoDeArea.findByValor", query = "SELECT t FROM Ts2TipoDeArea t WHERE t.valor = :valor"),
-    @NamedQuery(name = "Ts2TipoDeArea.findByClave", query = "SELECT t FROM Ts2TipoDeArea t WHERE t.clave = :clave")})
 public class Ts2TipoDeArea implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -42,9 +29,7 @@ public class Ts2TipoDeArea implements Serializable {
     private String valor;
     @Column(name = "clave")
     private String clave;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ts2TipoDeArea")
-    private Collection<Ts2ServidorPublicoArea> ts2ServidorPublicoAreaCollection;
-
+    
     public Ts2TipoDeArea() {
     }
 
@@ -74,15 +59,6 @@ public class Ts2TipoDeArea implements Serializable {
 
     public void setClave(String clave) {
         this.clave = clave;
-    }
-
-    @XmlTransient
-    public Collection<Ts2ServidorPublicoArea> getTs2ServidorPublicoAreaCollection() {
-        return ts2ServidorPublicoAreaCollection;
-    }
-
-    public void setTs2ServidorPublicoAreaCollection(Collection<Ts2ServidorPublicoArea> ts2ServidorPublicoAreaCollection) {
-        this.ts2ServidorPublicoAreaCollection = ts2ServidorPublicoAreaCollection;
     }
 
     @Override

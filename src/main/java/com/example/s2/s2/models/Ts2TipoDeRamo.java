@@ -10,10 +10,7 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -21,12 +18,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "ts2_tipo_de_ramo")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2TipoDeRamo.findAll", query = "SELECT t FROM Ts2TipoDeRamo t"),
-    @NamedQuery(name = "Ts2TipoDeRamo.findByIdTipoDeRamo", query = "SELECT t FROM Ts2TipoDeRamo t WHERE t.idTipoDeRamo = :idTipoDeRamo"),
-    @NamedQuery(name = "Ts2TipoDeRamo.findByValor", query = "SELECT t FROM Ts2TipoDeRamo t WHERE t.valor = :valor"),
-    @NamedQuery(name = "Ts2TipoDeRamo.findByClave", query = "SELECT t FROM Ts2TipoDeRamo t WHERE t.clave = :clave")})
 public class Ts2TipoDeRamo implements Serializable {
 
     private static final long serialVersionUID = 1L;

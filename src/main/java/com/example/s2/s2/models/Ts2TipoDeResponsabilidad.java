@@ -6,18 +6,11 @@
 package com.example.s2.s2.models;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -25,12 +18,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "ts2_tipo_de_responsabilidad")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Ts2TipoDeResponsabilidad.findAll", query = "SELECT t FROM Ts2TipoDeResponsabilidad t"),
-    @NamedQuery(name = "Ts2TipoDeResponsabilidad.findByIdTipoDeResponsabilidad", query = "SELECT t FROM Ts2TipoDeResponsabilidad t WHERE t.idTipoDeResponsabilidad = :idTipoDeResponsabilidad"),
-    @NamedQuery(name = "Ts2TipoDeResponsabilidad.findByValor", query = "SELECT t FROM Ts2TipoDeResponsabilidad t WHERE t.valor = :valor"),
-    @NamedQuery(name = "Ts2TipoDeResponsabilidad.findByClave", query = "SELECT t FROM Ts2TipoDeResponsabilidad t WHERE t.clave = :clave")})
 public class Ts2TipoDeResponsabilidad implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -42,8 +29,6 @@ public class Ts2TipoDeResponsabilidad implements Serializable {
     private String valor;
     @Column(name = "clave")
     private String clave;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ts2TipoDeResponsabilidad")
-    private Collection<Ts2ServidorPublicoResponsa> ts2ServidorPublicoResponsaCollection;
 
     public Ts2TipoDeResponsabilidad() {
     }
@@ -74,15 +59,6 @@ public class Ts2TipoDeResponsabilidad implements Serializable {
 
     public void setClave(String clave) {
         this.clave = clave;
-    }
-
-    @XmlTransient
-    public Collection<Ts2ServidorPublicoResponsa> getTs2ServidorPublicoResponsaCollection() {
-        return ts2ServidorPublicoResponsaCollection;
-    }
-
-    public void setTs2ServidorPublicoResponsaCollection(Collection<Ts2ServidorPublicoResponsa> ts2ServidorPublicoResponsaCollection) {
-        this.ts2ServidorPublicoResponsaCollection = ts2ServidorPublicoResponsaCollection;
     }
 
     @Override
